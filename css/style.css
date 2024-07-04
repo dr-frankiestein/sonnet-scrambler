@@ -1,0 +1,167 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+main{
+  display: flex;
+  justify-content: center;
+}
+main section {
+  margin-top: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 30px;
+  min-width: 550px;
+  height: 650px;
+
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+}
+ol li {
+  counter-increment: nums;
+  /* padding-left: 20px; */
+} 
+ol li:before {
+  content: counter(nums) ;
+  color: #CAD2C5;
+  margin-right: 20px;
+  display: inline-block;
+  text-align: right;
+  width: 40px;
+}
+/* Styles for even elements */
+ol li:nth-child(5n):before { 
+  color: #84A98C; 
+} 
+ol {
+  list-style: none;
+  counter-reset: nums;
+  margin-right: 80px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 4.5rem;  
+  background-color: rgba(21, 21, 54, 1);
+  /* color: #CAD2C5; */
+  color: #52796F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4.5rem;  
+  background-color: rgba(21, 21, 54, 1);
+  /* color: #CAD2C5; */
+  color: #52796F;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+#links {
+  width: 175px;
+  display: flex;
+  justify-content: space-between;
+}
+#links a{
+  /* display: block; */
+  text-align: right;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+button {
+  width: 150px;
+  height: 50px;
+  font-size: 1.2rem;
+  background-color: #84A98C;
+  /* background-color: #52796F; */
+  color: #151536;
+  border-radius: 1px;
+  box-shadow: 0.5px 0.5px 2px rgba(21, 21, 54, 0.7);
+  border: 1px solid rgba(21, 21, 54, 0.5);
+}
+h1 {
+  text-transform: uppercase;
+  margin: 30px;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+h1, button {
+  font-family: "Playfair Display", serif;
+}
+
+main section {
+  border: 2px solid rgb(21, 21, 54);
+  border-right: 3px solid rgb(21, 21, 54);
+  border-bottom: 3px solid rgb(21, 21, 54);
+  background-color: #CAD2C5;
+  color: rgb(21, 21, 54);
+  border-radius: 3px;
+}
+main section li {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+body {
+  background-color: #52796F;
+}
+
+footer a {
+  color: #84A98C;
+  color: #CAD2C5;
+  /* text-decoration: none; */
+  font-size: 1.1rem;
+  /* text-transform: uppercase; */
+  /* border: 0.5px solid #CAD2C5; */
+  padding: 5px;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 4px;
+
+}
+
+@media (width <=400px) {
+  * {
+    font-size: 26px;
+  }
+  main section {
+    width: 90%;
+    height: 1000px;
+  }
+  main {
+    height: 100%;
+  }
+  button {
+    width: 25%;
+    height: 75px;
+  }
+  /* footer {
+    flex-direction: column;
+    justify-content: center;
+  } */
+  #links {
+    width: 30%;
+  }
+}
