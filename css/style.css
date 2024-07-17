@@ -203,6 +203,6 @@ footer a {
       /* padding: 0; */
     }
     footer {
-      position: fixed;
+      position: static;
     }
 }
