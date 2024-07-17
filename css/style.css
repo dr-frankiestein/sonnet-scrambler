@@ -146,7 +146,7 @@ footer a {
 
 }
 
-@media (width <=400px) {
+/* @media (width <=400px) {
   * {
     font-size: 26px;
   }
@@ -164,8 +164,42 @@ footer a {
   /* footer {
     flex-direction: column;
     justify-content: center;
-  } */
+  } 
   #links {
     width: 30%;
   }
+} */
+
+@media (max-width: 600px) {
+    h1 {
+      font-size: 2em;
+      margin: 20px;
+    }
+    body{
+      max-width: 100vw;
+
+    }
+    #poem {
+      min-width: 0;
+      height: 77vh;
+      margin-top: 12vh;
+    }
+    #poem ol {
+      margin: 20px 10px 0 -15px;
+      padding: 0;
+    }
+    header {
+      height: 10vh;
+    }
+    #poem ol li {
+      font-size: 0.8rem;
+    }
+    footer > * {
+      width: 33.33%;
+      text-align: center;
+    }
+    footer, footer a {
+      font-size: 0.8rem;
+      /* padding: 0; */
+    }
 }
